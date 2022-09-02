@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.text-shadow {
+    text-shadow: #c0392b 3px 1px 5px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    background-color: #2E4C6D;
+    color: white;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+main {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+.count {
+    font-size: 150px;
+}
+
+
+/**********/
+/**button**/
+:root{
+    --button-mid-size: 80px;
+    --button-top-move: 100%;
+
+}
+
+@keyframes top-button {
+    100% {
+        bottom: 0%;
+    }
+}
+
+@keyframes center-button {
+    100% {
+        height: 0;
+    }
+}
+
+.button {
+
+    box-shadow: 0px 15px 0 20px #352d2d, 0px 40px 0 30px #000000;
+    cursor: pointer;
+    background-color: #c0392b;
+    position: absolute;
+    border-radius: 50%;
+    top: 75%;
+    left: 50%;
+    width: 480px;
+    height: 80px;
+    transform: translateX(-50%);
+    
+}
+
+.button::before {
+    content: '';
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: var(--button-top-move);
+    left: 0%;
+    width: 480px;
+    height: 80px;
+    transition: all 2s ease;
+
+}
+
+.button::after {
+    content: '';
+    background-color: #c0392b;
+    position: absolute;
+    bottom: 50%;
+    left: 0%;
+    width: 480px;
+    height: var(--button-mid-size);
+    transition: all 2s ease;
+
+}
+
+
